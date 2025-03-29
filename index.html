@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>寶可夢GO 屬性相剋查詢器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔍 寶可夢GO 屬性相剋查詢器</h1>
+
+  <div class="section">
+    <h2>🟢 選擇單一屬性</h2>
+    <div id="type-container"></div>
+  </div>
+
+  <div class="section">
+    <h2>🟣 選擇雙屬性</h2>
+    <div id="dual-type-container">
+      <div class="dual-group">
+        <p>第一屬性：</p>
+        <div id="dual-type-1"></div>
+      </div>
+      <div class="dual-group">
+        <p>第二屬性：</p>
+        <div id="dual-type-2"></div>
+      </div>
+      <button id="calculate-btn">計算雙屬性相剋</button>
+    </div>
+  </div>
+
+  <div id="result" class="result"></div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
