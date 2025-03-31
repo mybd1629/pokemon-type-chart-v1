@@ -1,6 +1,7 @@
+/* 基本樣式設定 */
 body {
   font-family: 'Microsoft JhengHei', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f0f0f5;
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -8,71 +9,98 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  color: #4caf50;
+}
+
+h2 {
   color: #333;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .section {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
+/* 按鈕區域 */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* 按鈕樣式 */
 .type-button, .dual-button {
   display: inline-block;
-  margin: 6px;
-  padding: 12px 18px;
-  background-color: #fff;
+  padding: 14px 20px;
+  background-color: #ffffff;
   border-radius: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #4caf50;
   cursor: pointer;
-  transition: 0.3s;
-  min-width: 60px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* 按鈕:hover狀態 */
 .type-button:hover, .dual-button:hover {
   background-color: #e0e0e0;
 }
 
+/* 按鈕選中狀態 */
 .type-button.active, .dual-button.active {
   background-color: #4caf50;
-  color: #fff;
-  border-color: #4caf50;
+  color: #ffffff;
+  border-color: #388e3c;
 }
 
-#dual-type-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dual-group {
-  margin: 10px 0;
-}
-
+/* 計算按鈕樣式 */
 #calculate-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
+  margin-top: 20px;
+  padding: 12px 25px;
   background-color: #1976d2;
-  color: #fff;
-  border-radius: 10px;
+  color: white;
+  border-radius: 20px;
+  font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 #calculate-btn:hover {
   background-color: #1565c0;
 }
 
+/* 結果區域樣式 */
 .result {
-  margin-top: 20px;
-  background-color: #fff;
-  padding: 15px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-size: 16px;
+  max-width: 100%;
+  margin: 20px auto;
 }
 
+/* 媒體查詢：行動裝置樣式調整 */
 @media (max-width: 600px) {
   .type-button, .dual-button {
     min-width: 45%;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  #calculate-btn {
+    width: 90%;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
